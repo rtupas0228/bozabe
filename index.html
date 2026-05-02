@@ -14,7 +14,16 @@
         .glass-nav { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); border-bottom: 1px solid #f1f5f9; }
         .card-zoom:hover img { transform: scale(1.1); }
         .hero-mask { border-radius: 40px 150px 40px 40px; }
-        .emerald-overlay { background: linear-gradient(to top, rgba(6, 78, 59, 0.9) 0%, rgba(6, 78, 59, 0.2) 60%, transparent 100%); }
+        
+        /* HOVER OVERLAY EFFECT FOR CRUISE */
+        .hover-info {
+            background: linear-gradient(to top, rgba(6, 78, 59, 0.98), rgba(6, 78, 59, 0.8));
+            transform: translateY(100%);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .group:hover .hover-info {
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -70,7 +79,7 @@
     <section id="international" class="py-24 px-6 bg-emerald-950 text-white">
         <div class="max-w-7xl mx-auto">
             <div class="mb-16 text-center lg:text-left">
-                <h2 class="text-4xl lg:text-5xl font-serif italic text-emerald-400 mb-4">International Tours</h2>
+                <h2 class="text-4xl lg:text-5xl font-serif italic text-emerald-400 mb-4 text-glow">International Tours</h2>
                 <p class="text-emerald-100/60 max-w-xl leading-relaxed">Depart from the Philippines' major hubs to the world's most breathtaking destinations.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -82,7 +91,7 @@
                     <div class="p-8">
                         <h4 class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Departing Manila</h4>
                         <h3 class="text-xl font-bold mb-4">Ninoy Aquino Intl</h3>
-                        <p class="text-xs text-emerald-100/60 leading-relaxed">Depart Manila for unforgettable adventures across amazing global destinations worldwide.</p>
+                        <p class="text-xs text-emerald-100/60 leading-relaxed">Depart Manila for unforgettable adventures worldwide.</p>
                     </div>
                 </div>
                 <!-- Cebu -->
@@ -93,10 +102,10 @@
                     <div class="p-8">
                         <h4 class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Departing Cebu</h4>
                         <h3 class="text-xl font-bold mb-4">Mactan-Cebu Intl</h3>
-                        <p class="text-xs text-emerald-100/60 leading-relaxed">Fly from Cebu to explore breathtaking destinations around the world easily.</p>
+                        <p class="text-xs text-emerald-100/60 leading-relaxed">Fly from Cebu to explore the world's exotic destinations.</p>
                     </div>
                 </div>
-                <!-- Davao (IMAGE FIXED) -->
+                <!-- Davao -->
                 <div class="group bg-emerald-900/40 rounded-[2.5rem] overflow-hidden border border-emerald-800 hover:border-emerald-500 transition duration-500">
                     <div class="h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Davao Skyline">
@@ -104,7 +113,7 @@
                     <div class="p-8">
                         <h4 class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Departing Davao</h4>
                         <h3 class="text-xl font-bold mb-4">Francisco Bangoy Intl</h3>
-                        <p class="text-xs text-emerald-100/60 leading-relaxed">Travel from Davao and discover the world’s most exciting places.</p>
+                        <p class="text-xs text-emerald-100/60 leading-relaxed">Travel from Davao and discover world-class excitement.</p>
                     </div>
                 </div>
                 <!-- Clark -->
@@ -115,7 +124,7 @@
                     <div class="p-8">
                         <h4 class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Departing Clark</h4>
                         <h3 class="text-xl font-bold mb-4">Clark International</h3>
-                        <p class="text-xs text-emerald-100/60 leading-relaxed">Fly from Clark to explore exotic cities and dream destinations worldwide.</p>
+                        <p class="text-xs text-emerald-100/60 leading-relaxed">Explore exotic cities and dream destinations from Clark.</p>
                     </div>
                 </div>
             </div>
@@ -129,26 +138,24 @@
                 <div class="relative group">
                     <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=800&auto=format&fit=crop" 
                          class="w-full h-[600px] object-cover rounded-[4rem] shadow-2xl transition duration-700 group-hover:rotate-1" alt="Philippines Islands">
-                    <div class="absolute -bottom-10 -right-10 bg-white p-10 rounded-[3rem] shadow-2xl border border-emerald-50 max-w-xs hidden md:block">
-                        <p class="text-3xl font-serif italic text-emerald-800 mb-2">7,000+ Islands</p>
-                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 leading-tight">Paradise across the archipelago</p>
-                    </div>
                 </div>
                 <div>
                     <span class="text-emerald-600 font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Where will you go next?</span>
                     <h2 class="text-5xl lg:text-7xl font-serif text-emerald-950 mb-8 italic leading-tight">Explore The <br> Philippines</h2>
                     <p class="text-lg text-slate-600 leading-relaxed mb-6">Discover paradise across 7,000+ islands—each one a gateway to something unforgettable.</p>
-                    <p class="text-slate-500 italic leading-relaxed mb-10">Whether you seek adventure, serenity, or connection, each moment invites you to create memories that will stay with you.</p>
                     
                     <div class="space-y-6">
+                        <!-- FIXED CEBU DOMESTIC IMAGE -->
                         <div class="flex flex-col md:flex-row gap-6 p-4 rounded-[2.5rem] bg-slate-50 border border-slate-100 group hover:border-emerald-500 transition duration-500">
-                            <img src="https://images.unsplash.com/photo-1624510014022-df38f80457d9?q=80&w=400&auto=format&fit=crop" class="w-full md:w-32 h-32 object-cover rounded-3xl" alt="Cebu Domestic">
+                            <img src="https://images.unsplash.com/photo-1542466373-10826955088c?q=80&w=400&auto=format&fit=crop" class="w-full md:w-32 h-32 object-cover rounded-3xl" alt="Cebu Domestic Tours">
                             <div class="flex-1 py-2">
                                 <h4 class="font-bold text-emerald-900 uppercase">CEBU TOURS</h4>
                                 <p class="text-[10px] text-emerald-700 font-bold uppercase tracking-widest mb-2 italic">Stay and Discover</p>
+                                <p class="text-xs text-slate-500 leading-relaxed mb-4 leading-relaxed"> urban excitement and historic landmarks.</p>
                                 <div class="font-serif font-bold text-emerald-700 text-xl">₱850.00 <span class="text-[10px] text-slate-400 font-sans uppercase">/ per person</span></div>
                             </div>
                         </div>
+                        <!-- Manila Departure -->
                         <div class="flex flex-col md:flex-row gap-6 p-4 rounded-[2.5rem] bg-emerald-950 border border-emerald-900 shadow-xl group">
                             <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=400&auto=format&fit=crop" class="w-full md:w-32 h-32 object-cover rounded-3xl" alt="Manila Departing">
                             <div class="flex-1 py-2">
@@ -168,36 +175,63 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20">
                 <span class="text-emerald-600 font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Where will the ocean take you?</span>
-                <h2 class="text-5xl font-serif text-emerald-950 italic leading-none mb-4">Cruise Into Paradise</h2>
+                <h2 class="text-5xl font-serif text-emerald-950 italic leading-none mb-4 text-glow">Cruise Into Paradise</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-                <div class="card-zoom relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl group cursor-pointer">
+                <!-- Osaka -->
+                <div class="relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl group cursor-pointer card-zoom">
                     <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700" alt="Osaka">
-                    <div class="emerald-overlay absolute inset-0 flex flex-col justify-end p-10 text-white">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 to-transparent flex flex-col justify-end p-10 text-white group-hover:opacity-0 transition-opacity duration-300">
                         <h3 class="text-2xl font-bold mb-2">Osaka, Japan</h3>
                         <div class="text-2xl font-serif italic text-emerald-400 font-bold">$480.00</div>
                     </div>
+                    <div class="hover-info absolute inset-0 flex flex-col justify-center p-10 text-white text-center">
+                        <h3 class="text-2xl font-bold mb-4">Osaka, Japan</h3>
+                        <p class="text-sm leading-relaxed mb-6 opacity-90 italic">Osaka blends ancient traditions with modern vibrancy, offering historic castles, neon-lit streets, and world-famous cuisine.</p>
+                        <div class="text-3xl font-serif italic text-emerald-400 font-bold">$480.00</div>
+                    </div>
                 </div>
-                <div class="card-zoom relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl group cursor-pointer lg:mt-12">
+
+                <!-- Maui -->
+                <div class="relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl group cursor-pointer lg:mt-12 card-zoom">
                     <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700" alt="Maui">
-                    <div class="emerald-overlay absolute inset-0 flex flex-col justify-end p-10 text-white">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 to-transparent flex flex-col justify-end p-10 text-white group-hover:opacity-0 transition-opacity duration-300">
                         <h3 class="text-2xl font-bold mb-2">Maui, Hawaii</h3>
                         <div class="text-2xl font-serif italic text-emerald-400 font-bold">$560.00</div>
                     </div>
+                    <div class="hover-info absolute inset-0 flex flex-col justify-center p-10 text-white text-center">
+                        <h3 class="text-2xl font-bold mb-4">Maui, Hawaii</h3>
+                        <p class="text-sm leading-relaxed mb-6 opacity-90 italic">Maui captivates visitors with its lush landscapes, golden beaches, volcanic peaks, and breathtaking coastal drives.</p>
+                        <div class="text-3xl font-serif italic text-emerald-400 font-bold">$560.00</div>
+                    </div>
                 </div>
-                <div class="card-zoom relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl group cursor-pointer">
+
+                <!-- Phuket -->
+                <div class="relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl group cursor-pointer card-zoom">
                     <img src="https://images.unsplash.com/photo-1589394815804-964ed9be2eb3?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700" alt="Phuket">
-                    <div class="emerald-overlay absolute inset-0 flex flex-col justify-end p-10 text-white">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 to-transparent flex flex-col justify-end p-10 text-white group-hover:opacity-0 transition-opacity duration-300">
                         <h3 class="text-2xl font-bold mb-2">Phuket, Thailand</h3>
                         <div class="text-2xl font-serif italic text-emerald-400 font-bold">$940.00</div>
                     </div>
+                    <div class="hover-info absolute inset-0 flex flex-col justify-center p-10 text-white text-center">
+                        <h3 class="text-2xl font-bold mb-4">Phuket, Thailand</h3>
+                        <p class="text-sm leading-relaxed mb-6 opacity-90 italic">Phuket enchants travelers with turquoise waters, pristine beaches, and vibrant nightlife combined with Thai culture.</p>
+                        <div class="text-3xl font-serif italic text-emerald-400 font-bold">$940.00</div>
+                    </div>
                 </div>
-                <div class="card-zoom relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl group cursor-pointer lg:mt-12">
+
+                <!-- Singapore -->
+                <div class="relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl group cursor-pointer lg:mt-12 card-zoom">
                     <img src="https://images.unsplash.com/photo-1525625293386-3fb0ad7c1fe6?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700" alt="Singapore">
-                    <div class="emerald-overlay absolute inset-0 flex flex-col justify-end p-10 text-white">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 to-transparent flex flex-col justify-end p-10 text-white group-hover:opacity-0 transition-opacity duration-300">
                         <h3 class="text-2xl font-bold mb-2">Singapore City</h3>
                         <div class="text-2xl font-serif italic text-emerald-400 font-bold">$690.00</div>
+                    </div>
+                    <div class="hover-info absolute inset-0 flex flex-col justify-center p-10 text-white text-center">
+                        <h3 class="text-2xl font-bold mb-4">Singapore City</h3>
+                        <p class="text-sm leading-relaxed mb-6 opacity-90 italic">Singapore dazzles with futuristic architecture, lush gardens, diverse cultures, and world-class cuisine.</p>
+                        <div class="text-3xl font-serif italic text-emerald-400 font-bold">$690.00</div>
                     </div>
                 </div>
             </div>
@@ -273,7 +307,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-8">Navigation</h4>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-8 transition">Navigation</h4>
                     <ul class="text-sm space-y-4 text-emerald-100/50">
                         <li><a href="#international" class="hover:text-white transition">International</a></li>
                         <li><a href="#domestic" class="hover:text-white transition">Domestic</a></li>
