@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bills Payment & E-Loading | Bozabe Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .tab-active { border-bottom: 3px solid #10b981; color: #064e3b; font-weight: 800; }
+        .glass-nav { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); border-bottom: 1px solid #f1f5f9; }
+    </style>
+</head>
+<body>
 
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 glass-nav px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 text-emerald-950 font-bold uppercase tracking-tighter text-xl">
+                <i data-lucide="arrow-left" class="text-emerald-500"></i> Back to Home
+            </a>
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Pay & Recharge</span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="py-16 px-6 bg-emerald-950 text-white text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h1 class="text-5xl font-serif italic mb-4 text-emerald-400">Bills & E-Loading</h1>
+            <p class="text-emerald-100/70">Skip the long queues. Secure, fast, and convenient lifestyle payments.</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto py-12 px-6">
+        
+        <!-- TAB TOGGLE -->
+        <div class="flex justify-center gap-12 mb-12 border-b border-slate-200">
+            <button onclick="switchTab('bills')" id="btn-bills" class="pb-4 font-bold uppercase tracking-widest text-sm tab-active transition-all">Bills Payment</button>
+            <button onclick="switchTab('loading')" id="btn-loading" class="pb-4 font-bold uppercase tracking-widest text-sm text-slate-400 hover:text-emerald-600 transition-all">E-Loading</button>
+        </div>
+
+        <!-- BILLS PAYMENT FORM -->
+        <div id="form-bills" class="bg-white rounded-[2.5rem] p-8 lg:p-12 shadow-2xl border border-slate-100">
+            <div class="flex items-center gap-3 mb-10 text-emerald-900">
+                <i data-lucide="receipt"></i>
+                <h2 class="text-2xl font-bold uppercase tracking-tighter">Bills Payment</h2>
+            </div>
+            <form class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Name of Merchant</label>
+                    <input type="text" placeholder="e.g. Meralco, Water, etc.." class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Account Name</label>
+                    <input type="text" placeholder="Name on the Bill" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Account Number</label>
+                    <input type="text" placeholder="Enter Account Number" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+
+                <div class="md:col-span-1">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Full Name</label>
+                    <input type="text" placeholder="Your Name" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Email</label>
+                    <input type="email" placeholder="E-mail address" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Mobile Number</label>
+                    <input type="tel" placeholder="Phone number" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+
+                <div class="md:col-span-3">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Message / Remarks</label>
+                    <textarea placeholder="Any specific instructions..." rows="2" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition"></textarea>
+                </div>
+
+                <!-- IMPORTANT NOTE -->
+                <div class="md:col-span-3 p-4 bg-amber-50 rounded-xl border border-amber-100 flex gap-4 items-start">
+                    <i data-lucide="alert-circle" class="text-amber-600 shrink-0"></i>
+                    <p class="text-xs text-amber-800 leading-relaxed font-medium">
+                        <strong>Note:</strong> We highly encourage you to pay the full amount of your bill <strong>3 days BEFORE</strong> its due date to avoid any inconveniences.
+                    </p>
+                </div>
+
+                <button class="md:col-span-3 bg-emerald-700 text-white py-5 rounded-2xl font-bold uppercase tracking-[0.2em] hover:bg-emerald-800 transition shadow-xl">Submit Bills Payment Inquiry</button>
+            </form>
+        </div>
+
+        <!-- E-LOADING FORM (Hidden by default) -->
+        <div id="form-loading" class="hidden bg-white rounded-[2.5rem] p-8 lg:p-12 shadow-2xl border border-slate-100">
+            <div class="flex items-center gap-3 mb-10 text-emerald-900">
+                <i data-lucide="smartphone"></i>
+                <h2 class="text-2xl font-bold uppercase tracking-tighter">E-Loading Service</h2>
+            </div>
+            <form class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Mobile Network</label>
+                    <input type="text" placeholder="e.g. Globe, DITO, Smart, etc.." class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Mobile Number</label>
+                    <input type="tel" placeholder="Cellular Number" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Type of Load / Amount</label>
+                    <input type="text" placeholder="Amount and Promo Name" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Full Name</label>
+                    <input type="text" placeholder="Enter your name" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Email</label>
+                    <input type="email" placeholder="E-mail address" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+
+                <button class="md:col-span-3 bg-emerald-700 text-white py-5 rounded-2xl font-bold uppercase tracking-[0.2em] hover:bg-emerald-800 transition shadow-xl mt-4">Proceed to Load Request</button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-emerald-950 text-white text-center border-t border-emerald-900">
+        <p class="text-[10px] font-bold text-emerald-800 uppercase tracking-widest italic">© Copyright Bozabe Travel Services. All rights reserved.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function switchTab(type) {
+            const bForm = document.getElementById('form-bills');
+            const lForm = document.getElementById('form-loading');
+            const bBtn = document.getElementById('btn-bills');
+            const lBtn = document.getElementById('btn-loading');
+
+            if(type === 'bills') {
+                bForm.classList.remove('hidden');
+                lForm.classList.add('hidden');
+                bBtn.classList.add('tab-active');
+                bBtn.classList.remove('text-slate-400');
+                lBtn.classList.remove('tab-active');
+                lBtn.classList.add('text-slate-400');
+            } else {
+                lForm.classList.remove('hidden');
+                bForm.classList.add('hidden');
+                lBtn.classList.add('tab-active');
+                lBtn.classList.remove('text-slate-400');
+                bBtn.classList.remove('tab-active');
+                bBtn.classList.add('text-slate-400');
+            }
+        }
+    </script>
+</body>
+</html>
