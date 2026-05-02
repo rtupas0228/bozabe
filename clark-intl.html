@@ -1,1 +1,50 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Clark Intl Book Covers | Bozabe</title>
+    <script src="https://cdn.tailwindcss.com"></script><script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        .book-cover { position: relative; width: 100%; aspect-ratio: 3/4; border-radius: 4px 20px 20px 4px; overflow: hidden; box-shadow: 10px 10px 30px rgba(0,0,0,0.2); transition: all 0.5s ease; cursor: pointer; border-left: 8px solid rgba(0,0,0,0.3); }
+        .book-cover:hover { transform: rotateY(-10deg) scale(1.02); box-shadow: 20px 20px 50px rgba(6, 78, 59, 0.3); }
+        .book-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(6, 78, 59, 0.95), transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; color: white; }
+    </style>
+</head>
+<body class="bg-white">
+    <nav class="p-6 border-b flex justify-between items-center">
+        <a href="index.html" class="font-bold uppercase text-emerald-900 flex items-center gap-2"><i data-lucide="arrow-left"></i> Home</a>
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Clark Departure Hub</span>
+    </nav>
+    <header class="py-20 text-center"><h1 class="text-6xl font-serif italic text-emerald-950">Choose your travel <br> book cover</h1><p class="text-slate-500 mt-4">Exploring global cities from the North Hub.</p></header>
+    <main class="max-w-7xl mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
+        <!-- South Korea -->
+        <div class="book-cover">
+            <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?q=80&w=800" class="w-full h-full object-cover">
+            <div class="book-overlay">
+                <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest mb-2">Vol. 01 — K-Pulse</span>
+                <h2 class="text-4xl font-serif italic mb-4">Seoul <br> Soul</h2>
+                <div class="border-t border-white/20 pt-4 flex justify-between items-center"><span class="text-xs font-bold uppercase">Explore Now</span><i data-lucide="chevron-right"></i></div>
+            </div>
+        </div>
+        <!-- Taiwan -->
+        <div class="book-cover">
+            <img src="https://images.unsplash.com/photo-1552912853-847c797280ee?q=80&w=800" class="w-full h-full object-cover">
+            <div class="book-overlay">
+                <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest mb-2">Vol. 02 — Formosa</span>
+                <h2 class="text-4xl font-serif italic mb-4">Taiwan <br> Treasures</h2>
+                <div class="border-t border-white/20 pt-4 flex justify-between items-center"><span class="text-xs font-bold uppercase">Explore Now</span><i data-lucide="chevron-right"></i></div>
+            </div>
+        </div>
+        <!-- Middle East -->
+        <div class="book-cover">
+            <img src="https://images.unsplash.com/photo-1512453979798-5eaad0df3bdc?q=80&w=800" class="w-full h-full object-cover">
+            <div class="book-overlay">
+                <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest mb-2">Vol. 03 — Oasis Dreams</span>
+                <h2 class="text-4xl font-serif italic mb-4">Dubai <br> Diaries</h2>
+                <div class="border-t border-white/20 pt-4 flex justify-between items-center"><span class="text-xs font-bold uppercase">Explore Now</span><i data-lucide="chevron-right"></i></div>
+            </div>
+        </div>
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
