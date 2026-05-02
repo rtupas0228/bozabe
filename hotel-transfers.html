@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels & Car Transfers | Bozabe Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .tab-active { border-bottom: 3px solid #10b981; color: #064e3b; font-weight: 800; }
+        .glass-nav { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); border-bottom: 1px solid #f1f5f9; }
+    </style>
+</head>
+<body>
 
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 glass-nav px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 text-emerald-950 font-bold uppercase tracking-tighter text-xl">
+                <i data-lucide="arrow-left" class="text-emerald-500"></i> Back to Home
+            </a>
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Stay & Move</span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="py-16 px-6 bg-emerald-950 text-white text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h1 class="text-5xl font-serif italic mb-4">Stay and Move</h1>
+            <p class="text-emerald-100/70">Luxury hotel accommodations and reliable transfers worldwide.</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto py-12 px-6">
+        
+        <!-- TAB TOGGLE -->
+        <div class="flex justify-center gap-12 mb-12 border-b border-slate-200">
+            <button onclick="switchTab('hotel')" id="btn-hotel" class="pb-4 font-bold uppercase tracking-widest text-sm tab-active transition-all">Hotel Booking</button>
+            <button onclick="switchTab('car')" id="btn-car" class="pb-4 font-bold uppercase tracking-widest text-sm text-slate-400 hover:text-emerald-600 transition-all">Car Rental/Transfers</button>
+        </div>
+
+        <!-- HOTEL BOOKING FORM -->
+        <div id="form-hotel" class="bg-white rounded-[2.5rem] p-8 lg:p-12 shadow-2xl border border-slate-100">
+            <div class="flex items-center gap-3 mb-10 text-emerald-900">
+                <i data-lucide="building"></i>
+                <h2 class="text-2xl font-bold uppercase tracking-tighter">Hotel Accommodation</h2>
+            </div>
+            <form class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="md:col-span-2">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">City/Hotel Name</label>
+                    <input type="text" placeholder="Enter City or Hotel" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Check-in Date</label>
+                    <input type="date" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Check-out Date</label>
+                    <input type="date" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Adults</label>
+                    <input type="number" value="1" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Child/ren</label>
+                    <input type="number" value="0" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div class="md:col-span-2">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Full Name</label>
+                    <input type="text" placeholder="Enter your name" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Email</label>
+                    <input type="email" placeholder="E-mail address" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div class="md:col-span-2">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Mobile Number</label>
+                    <input type="tel" placeholder="Phone number" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+
+                <div class="md:col-span-4">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Room Request / Remarks</label>
+                    <textarea placeholder="Enter special requests or specific hotel preferences..." rows="2" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition"></textarea>
+                </div>
+                <button class="md:col-span-4 bg-emerald-700 text-white py-5 rounded-2xl font-bold uppercase tracking-[0.2em] hover:bg-emerald-800 transition shadow-xl">Inquire Hotel Booking</button>
+            </form>
+        </div>
+
+        <!-- CAR RENTALS FORM (Hidden by default) -->
+        <div id="form-car" class="hidden bg-white rounded-[2.5rem] p-8 lg:p-12 shadow-2xl border border-slate-100">
+            <div class="flex items-center gap-3 mb-10 text-emerald-900">
+                <i data-lucide="car"></i>
+                <h2 class="text-2xl font-bold uppercase tracking-tighter">Car Rental/Transfers</h2>
+            </div>
+            <form class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="md:col-span-2">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Pick-up Point</label>
+                    <input type="text" placeholder="Enter Pick-up Location" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div class="md:col-span-2">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Drop-off Point</label>
+                    <input type="text" placeholder="Enter Drop-off Location" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Pick-up Date</label>
+                    <input type="date" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Trip Type</label>
+                    <select class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                        <option>One-way</option>
+                        <option>Round-trip</option>
+                        <option>Full day rental</option>
+                    </select>
+                </div>
+                <div class="flex gap-2">
+                    <div class="flex-1">
+                        <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Adults</label>
+                        <input type="number" value="1" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                    </div>
+                    <div class="flex-1">
+                        <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Child/ren</label>
+                        <input type="number" value="0" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                    </div>
+                </div>
+                <div class="md:col-span-1">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Full Name</label>
+                    <input type="text" placeholder="Enter your name" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Email</label>
+                    <input type="email" placeholder="E-mail address" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+                <div class="md:col-span-2">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Mobile Number</label>
+                    <input type="tel" placeholder="Phone number" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition">
+                </div>
+
+                <div class="md:col-span-4">
+                    <label class="text-[10px] font-bold uppercase text-emerald-600 tracking-widest block mb-1 ml-1">Message / Remarks</label>
+                    <textarea placeholder="Enter special requests or flight arrival details..." rows="2" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500 transition"></textarea>
+                </div>
+                <div class="md:col-span-4 p-4 bg-emerald-50 rounded-xl border border-emerald-100 flex gap-4 items-center">
+                    <i data-lucide="info" class="text-emerald-700"></i>
+                    <p class="text-xs text-emerald-800 italic font-medium">Note: For round-trip car transfers, a travel executive will contact you to confirm the details.</p>
+                </div>
+                <button class="md:col-span-4 bg-emerald-700 text-white py-5 rounded-2xl font-bold uppercase tracking-[0.2em] hover:bg-emerald-800 transition shadow-xl">Inquire Car Transfer</button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-emerald-950 text-white text-center border-t border-emerald-900">
+        <p class="text-[10px] font-bold text-emerald-800 uppercase tracking-widest italic">© Copyright Bozabe Travel Services. All rights reserved.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function switchTab(type) {
+            const hForm = document.getElementById('form-hotel');
+            const cForm = document.getElementById('form-car');
+            const hBtn = document.getElementById('btn-hotel');
+            const cBtn = document.getElementById('btn-car');
+
+            if(type === 'hotel') {
+                hForm.classList.remove('hidden');
+                cForm.classList.add('hidden');
+                hBtn.classList.add('tab-active');
+                hBtn.classList.remove('text-slate-400');
+                cBtn.classList.remove('tab-active');
+                cBtn.classList.add('text-slate-400');
+            } else {
+                cForm.classList.remove('hidden');
+                hForm.classList.add('hidden');
+                cBtn.classList.add('tab-active');
+                cBtn.classList.remove('text-slate-400');
+                hBtn.classList.remove('tab-active');
+                hBtn.classList.add('text-slate-400');
+            }
+        }
+    </script>
+</body>
+</html>
