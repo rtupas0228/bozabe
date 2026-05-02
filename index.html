@@ -235,58 +235,61 @@
                         <div class="text-3xl font-serif italic text-emerald-400 font-bold">$690.00</div>
                     </div>
                 </div>
-
+ </section>
             <!-- CRUISE FORM -->
-            <div id="contact" class="max-w-4xl mx-auto bg-white rounded-[4rem] p-12 shadow-2xl border border-slate-100 relative">
-                <h3 class="text-3xl font-serif italic text-emerald-950 mb-12 text-center">Plan your cruise holiday today!</h3>
-                <form class="grid md:grid-cols-2 gap-8">
-                    <input type="text" placeholder="Departure Port" class="w-full p-4 rounded-2xl bg-slate-50 outline-none focus:ring-2 focus:ring-emerald-500">
-                    <input type="text" placeholder="Arrival Port" class="w-full p-4 rounded-2xl bg-slate-50 outline-none focus:ring-2 focus:ring-emerald-500">
-                    <input type="date" class="w-full p-4 rounded-2xl bg-slate-50 outline-none focus:ring-2 focus:ring-emerald-500">
-                    <input type="date" class="w-full p-4 rounded-2xl bg-slate-50 outline-none focus:ring-2 focus:ring-emerald-500">
-                    <input type="number" placeholder="Adults" class="w-full p-4 rounded-2xl bg-slate-50 outline-none focus:ring-2 focus:ring-emerald-500">
-                    <input type="number" placeholder="Children" class="w-full p-4 rounded-2xl bg-slate-50 outline-none focus:ring-2 focus:ring-emerald-500">
-                    <input type="text" placeholder="Full Name" class="md:col-span-2 w-full p-4 rounded-2xl bg-slate-50 outline-none focus:ring-2 focus:ring-emerald-500">
-                    <textarea placeholder="Remarks / Preferred Cruiseline" rows="4" class="md:col-span-2 w-full p-4 rounded-2xl bg-slate-50 outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
-                    <button class="md:col-span-2 bg-emerald-700 text-white py-6 rounded-[2rem] font-bold uppercase tracking-[0.2em] hover:bg-emerald-800 transition shadow-xl">Submit Request</button>
-                </form>
+           <div id="contact" class="max-w-6xl mx-auto bg-white rounded-3xl p-6 lg:p-8 shadow-2xl border border-slate-100 relative overflow-hidden">
+    <!-- Sleek decorative accent -->
+    <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-bl-full opacity-50"></div>
+    
+    <div class="relative z-10">
+        <h3 class="text-2xl font-serif italic text-emerald-950 mb-6 text-center lg:text-left">Plan your cruise holiday today!</h3>
+        
+        <form class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <!-- ROW 1 -->
+            <div>
+                <label class="text-[10px] uppercase font-bold text-emerald-600 tracking-widest ml-1 mb-1 block">Departure Port</label>
+                <input type="text" placeholder="Port of Departure" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-100 focus:ring-2 focus:ring-emerald-500 outline-none text-sm">
             </div>
-        </div>
-    </section>
+            <div>
+                <label class="text-[10px] uppercase font-bold text-emerald-600 tracking-widest ml-1 mb-1 block">Arrival Port</label>
+                <input type="text" placeholder="Port of Arrival" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-100 focus:ring-2 focus:ring-emerald-500 outline-none text-sm">
+            </div>
+            <div>
+                <label class="text-[10px] uppercase font-bold text-emerald-600 tracking-widest ml-1 mb-1 block">Sailing Start</label>
+                <input type="date" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-100 focus:ring-2 focus:ring-emerald-500 outline-none text-sm">
+            </div>
+            <div>
+                <label class="text-[10px] uppercase font-bold text-emerald-600 tracking-widest ml-1 mb-1 block">Sailing End</label>
+                <input type="date" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-100 focus:ring-2 focus:ring-emerald-500 outline-none text-sm">
+            </div>
 
-    <!-- OTHER SERVICES -->
-    <section id="services" class="py-24 px-6 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-serif text-emerald-950 italic">Other Products and Services</h2>
+            <!-- ROW 2 -->
+            <div class="md:col-span-2">
+                <label class="text-[10px] uppercase font-bold text-emerald-600 tracking-widest ml-1 mb-1 block">Full Name</label>
+                <input type="text" placeholder="Your Complete Name" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-100 focus:ring-2 focus:ring-emerald-500 outline-none text-sm">
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-10 rounded-[3rem] border border-slate-100 bg-white hover:border-emerald-500 transition shadow-sm hover:shadow-xl group">
-                    <div class="text-emerald-500 mb-8 group-hover:scale-110 transition"><i data-lucide="plane" size="32"></i></div>
-                    <h4 class="text-[10px] font-bold uppercase text-emerald-600 mb-2 italic tracking-widest">Fly and Sail</h4>
-                    <h3 class="text-xl font-bold mb-4 text-emerald-950 uppercase leading-none">Airlines & Ferries</h3>
-                    <div class="text-2xl font-bold text-emerald-700 font-serif italic">$880.00</div>
-                </div>
-                <div class="p-10 rounded-[3rem] border border-slate-100 bg-white hover:border-emerald-500 transition shadow-sm hover:shadow-xl group">
-                    <div class="text-emerald-500 mb-8 group-hover:scale-110 transition"><i data-lucide="home" size="32"></i></div>
-                    <h4 class="text-[10px] font-bold uppercase text-emerald-600 mb-2 italic tracking-widest">Stay and Move</h4>
-                    <h3 class="text-xl font-bold mb-4 text-emerald-950 uppercase leading-none">Hotel & Transfers</h3>
-                    <div class="text-2xl font-bold text-emerald-700 font-serif italic">$160.00</div>
-                </div>
-                <div class="p-10 rounded-[3rem] border border-slate-100 bg-white hover:border-emerald-500 transition shadow-sm hover:shadow-xl group">
-                    <div class="text-emerald-500 mb-8 group-hover:scale-110 transition"><i data-lucide="zap" size="32"></i></div>
-                    <h4 class="text-[10px] font-bold uppercase text-emerald-600 mb-2 italic tracking-widest">Pay & Recharge</h4>
-                    <h3 class="text-xl font-bold mb-4 text-emerald-950 uppercase leading-none">Bills & E-Loading</h3>
-                    <div class="text-2xl font-bold text-emerald-700 font-serif italic">$140.00</div>
-                </div>
-                <div class="p-10 rounded-[3rem] border border-slate-100 bg-white hover:border-emerald-500 transition shadow-sm hover:shadow-xl group">
-                    <div class="text-emerald-500 mb-8 group-hover:scale-110 transition"><i data-lucide="file-check" size="32"></i></div>
-                    <h4 class="text-[10px] font-bold uppercase text-emerald-600 mb-2 italic tracking-widest">Beyond Borders</h4>
-                    <h3 class="text-xl font-bold mb-4 text-emerald-950 uppercase leading-none">Passport & Visa</h3>
-                    <div class="text-2xl font-bold text-emerald-700 font-serif italic">$90.00</div>
-                </div>
+            <div>
+                <label class="text-[10px] uppercase font-bold text-emerald-600 tracking-widest ml-1 mb-1 block">Adults</label>
+                <input type="number" value="1" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-100 focus:ring-2 focus:ring-emerald-500 outline-none text-sm">
             </div>
-        </div>
+            <div>
+                <label class="text-[10px] uppercase font-bold text-emerald-600 tracking-widest ml-1 mb-1 block">Children</label>
+                <input type="number" value="0" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-100 focus:ring-2 focus:ring-emerald-500 outline-none text-sm">
+            </div>
+
+            <!-- ROW 3 (Final Row) -->
+            <div class="md:col-span-3">
+                <label class="text-[10px] uppercase font-bold text-emerald-600 tracking-widest ml-1 mb-1 block">Remarks / Cruiseline</label>
+                <textarea placeholder="Preferred Cruiseline or specific requests..." rows="1" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-100 focus:ring-2 focus:ring-emerald-500 outline-none text-sm resize-none"></textarea>
+            </div>
+            <div class="flex items-end">
+                <button class="w-full bg-emerald-700 text-white py-3 rounded-xl font-bold uppercase tracking-widest hover:bg-emerald-800 shadow-lg transition-all hover:scale-[1.02] text-xs">
+                    Submit Request
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
     </section>
 
     <!-- FOOTER -->
