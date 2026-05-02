@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bozabe Travel | Premium Global Tours & Services</title>
+    <title>Bozabe Travel | 0% Installment Global Tours</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; color: #0f172a; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; }
         .font-serif { font-family: 'Playfair Display', serif; }
         .glass-nav { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); border-bottom: 1px solid #f1f5f9; }
         .emerald-gradient { background: linear-gradient(135deg, #064e3b 0%, #059669 100%); }
-        .service-card:hover { transform: translateY(-5px); border-color: #10b981; }
-        .airport-card:hover { background-color: #064e3b; color: white !important; }
-        .airport-card:hover p { color: rgba(255,255,255,0.7); }
+        .card-zoom:hover img { transform: scale(1.1); }
+        .cruise-overlay { background: linear-gradient(to top, rgba(6, 78, 59, 0.9) 0%, rgba(6, 78, 59, 0.4) 50%, transparent 100%); }
     </style>
 </head>
 <body>
@@ -24,22 +23,19 @@
     <nav class="sticky top-0 z-50 glass-nav px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-emerald-700 rounded-xl flex items-center justify-center text-white shadow-lg shadow-emerald-100">
-                    <i data-lucide="globe"></i>
+                <div class="w-10 h-10 bg-emerald-700 rounded-xl flex items-center justify-center text-white">
+                    <i data-lucide="anchor"></i>
                 </div>
                 <span class="text-2xl font-bold tracking-tighter text-emerald-950 uppercase">BOZABE<span class="text-emerald-500">.</span></span>
             </div>
-            
-            <div class="hidden lg:flex gap-8 font-bold text-[11px] uppercase tracking-[0.2em] text-slate-500">
-                <a href="#home" class="hover:text-emerald-700 transition">Home</a>
-                <a href="#international" class="hover:text-emerald-700 transition">International</a>
-                <a href="#domestic" class="hover:text-emerald-700 transition">Domestic</a>
-                <a href="#cruise" class="hover:text-emerald-700 transition">Cruise</a>
-                <a href="#services" class="hover:text-emerald-700 transition">Services</a>
-                <a href="#about" class="hover:text-emerald-700 transition">About</a>
+            <div class="hidden lg:flex gap-8 font-bold text-[11px] uppercase tracking-widest text-slate-500">
+                <a href="#home" class="hover:text-emerald-700">Home</a>
+                <a href="#international" class="hover:text-emerald-700">International</a>
+                <a href="#domestic" class="hover:text-emerald-700">Domestic</a>
+                <a href="#cruise" class="hover:text-emerald-700">Cruise</a>
+                <a href="#services" class="hover:text-emerald-700">Services</a>
             </div>
-
-            <a href="#contact" class="bg-emerald-700 text-white px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-emerald-800 transition shadow-lg shadow-emerald-100">Inquire Now</a>
+            <a href="#contact" class="bg-emerald-700 text-white px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-emerald-800 transition shadow-lg">Book Now</a>
         </div>
     </nav>
 
@@ -48,69 +44,56 @@
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div class="relative z-10">
                 <div class="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-[10px] font-extrabold uppercase tracking-widest mb-6 border border-emerald-100">
-                    Book Now, Pay Later • 0% Installment
+                    0% Installment • No Credit Card Needed
                 </div>
-                <h1 class="text-6xl lg:text-8xl font-serif text-emerald-950 leading-[1.1] mb-8">
-                    Adventure <br> Awaits <span class="text-emerald-600 italic">Global.</span>
+                <h1 class="text-6xl lg:text-8xl font-serif text-emerald-950 leading-tight mb-8">
+                    Journey <br> Beyond <span class="text-emerald-600 italic">Limits.</span>
                 </h1>
-                <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-lg">
-                    No credit card needed. We create unforgettable travel experiences. Your journey starts here — simple, seamless, and made just for you.
+                <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-lg italic">
+                    We create unforgettable travel experiences. Your journey starts here — simple, seamless, and made just for you.
                 </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#international" class="bg-emerald-700 text-white px-10 py-5 rounded-2xl font-bold shadow-xl hover:bg-emerald-800 transition">Explore Global</a>
-                    <a href="#domestic" class="bg-white text-emerald-900 border border-emerald-100 px-10 py-5 rounded-2xl font-bold hover:bg-emerald-50 transition shadow-sm">Explore Philippines</a>
+                <div class="flex gap-4">
+                    <a href="#international" class="bg-emerald-700 text-white px-10 py-5 rounded-2xl font-bold shadow-xl hover:bg-emerald-800 transition">International</a>
+                    <a href="#domestic" class="bg-emerald-50 text-emerald-700 border border-emerald-100 px-10 py-5 rounded-2xl font-bold hover:bg-emerald-100 transition">Domestic</a>
                 </div>
             </div>
             <div class="relative">
-                <div class="absolute -top-10 -right-10 w-72 h-72 bg-emerald-100 rounded-full filter blur-3xl opacity-30"></div>
-                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=1000" class="rounded-[3rem] shadow-2xl relative z-10 w-full h-[600px] object-cover border-[12px] border-white" alt="Travel Image">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&q=80&w=1000" class="rounded-[3rem] shadow-2xl w-full h-[600px] object-cover border-[12px] border-white" alt="Flight">
             </div>
         </div>
     </header>
 
     <!-- INTERNATIONAL TOURS -->
-    <section id="international" class="py-24 px-6 bg-slate-50 border-y border-slate-100">
+    <section id="international" class="py-24 px-6 bg-emerald-950 text-white">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-16">
-                <span class="text-emerald-600 font-bold uppercase tracking-widest text-[10px]">Depart Manila, Cebu, Davao, or Clark</span>
-                <h2 class="text-4xl lg:text-5xl font-serif text-emerald-950 mt-4 italic leading-tight">International Tours</h2>
+            <div class="mb-16 text-center lg:text-left">
+                <h2 class="text-4xl lg:text-5xl font-serif italic text-emerald-400 mb-4">International Tours</h2>
+                <p class="text-emerald-100/60 max-w-xl">Depart from the Philippines' major hubs to the world's most breathtaking destinations.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Airport 1 -->
-                <div class="airport-card bg-white p-8 rounded-[2rem] border border-slate-200 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700 mb-6 group-hover:bg-emerald-500 group-hover:text-white transition">
-                        <i data-lucide="plane-takeoff"></i>
-                    </div>
-                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">Departing Manila</h3>
-                    <h4 class="text-xl font-bold text-emerald-950 mb-4 group-hover:text-white">Ninoy Aquino Intl Airport</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed group-hover:text-emerald-100">Depart Manila for unforgettable adventures across amazing global destinations worldwide.</p>
+                <div class="bg-emerald-900/40 p-8 rounded-3xl border border-emerald-800 hover:bg-emerald-800 transition cursor-pointer group">
+                    <i data-lucide="plane-takeoff" class="text-emerald-500 mb-6 group-hover:scale-110 transition"></i>
+                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Departing Manila</h4>
+                    <h3 class="text-xl font-bold mb-4">Ninoy Aquino Intl Airport</h3>
+                    <p class="text-sm text-emerald-100/60 leading-relaxed">Depart Manila for unforgettable adventures across amazing global destinations worldwide.</p>
                 </div>
-                <!-- Airport 2 -->
-                <div class="airport-card bg-white p-8 rounded-[2rem] border border-slate-200 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700 mb-6 group-hover:bg-emerald-500 group-hover:text-white transition">
-                        <i data-lucide="plane-takeoff"></i>
-                    </div>
-                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">Departing Cebu</h3>
-                    <h4 class="text-xl font-bold text-emerald-950 mb-4 group-hover:text-white">Mactan-Cebu Intl Airport</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed group-hover:text-emerald-100">Fly from Cebu to explore breathtaking destinations around the world easily.</p>
+                <div class="bg-emerald-900/40 p-8 rounded-3xl border border-emerald-800 hover:bg-emerald-800 transition cursor-pointer group">
+                    <i data-lucide="plane-takeoff" class="text-emerald-500 mb-6 group-hover:scale-110 transition"></i>
+                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Departing Cebu</h4>
+                    <h3 class="text-xl font-bold mb-4">Mactan-Cebu Intl Airport</h3>
+                    <p class="text-sm text-emerald-100/60 leading-relaxed">Fly from Cebu to explore breathtaking destinations around the world easily.</p>
                 </div>
-                <!-- Airport 3 -->
-                <div class="airport-card bg-white p-8 rounded-[2rem] border border-slate-200 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700 mb-6 group-hover:bg-emerald-500 group-hover:text-white transition">
-                        <i data-lucide="plane-takeoff"></i>
-                    </div>
-                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">Departing Davao</h3>
-                    <h4 class="text-xl font-bold text-emerald-950 mb-4 group-hover:text-white">Francisco Bangoy Intl Airport</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed group-hover:text-emerald-100">Travel from Davao and discover the world’s most exciting places.</p>
+                <div class="bg-emerald-900/40 p-8 rounded-3xl border border-emerald-800 hover:bg-emerald-800 transition cursor-pointer group">
+                    <i data-lucide="plane-takeoff" class="text-emerald-500 mb-6 group-hover:scale-110 transition"></i>
+                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Departing Davao</h4>
+                    <h3 class="text-xl font-bold mb-4">Francisco Bangoy Intl Airport</h3>
+                    <p class="text-sm text-emerald-100/60 leading-relaxed">Travel from Davao and discover the world’s most exciting places.</p>
                 </div>
-                <!-- Airport 4 -->
-                <div class="airport-card bg-white p-8 rounded-[2rem] border border-slate-200 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700 mb-6 group-hover:bg-emerald-500 group-hover:text-white transition">
-                        <i data-lucide="plane-takeoff"></i>
-                    </div>
-                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">Departing Clark</h3>
-                    <h4 class="text-xl font-bold text-emerald-950 mb-4 group-hover:text-white">Clark International Airport</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed group-hover:text-emerald-100">Fly from Clark to explore exotic cities and dream destinations worldwide.</p>
+                <div class="bg-emerald-900/40 p-8 rounded-3xl border border-emerald-800 hover:bg-emerald-800 transition cursor-pointer group">
+                    <i data-lucide="plane-takeoff" class="text-emerald-500 mb-6 group-hover:scale-110 transition"></i>
+                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2">Departing Clark</h4>
+                    <h3 class="text-xl font-bold mb-4">Clark International Airport</h3>
+                    <p class="text-sm text-emerald-100/60 leading-relaxed">Fly from Clark to explore exotic cities and dream destinations worldwide.</p>
                 </div>
             </div>
         </div>
@@ -119,239 +102,180 @@
     <!-- DOMESTIC TOURS -->
     <section id="domestic" class="py-24 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-20 items-center mb-20">
-                <div class="relative h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover rounded-[3rem] shadow-2xl" alt="PH Islands">
-                    <div class="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md p-8 rounded-3xl border border-emerald-100 shadow-xl">
-                        <p class="text-3xl font-serif italic text-emerald-800">7,000+ Islands</p>
-                        <p class="text-xs font-bold uppercase tracking-widest text-slate-500">To explore and experience</p>
-                    </div>
-                </div>
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
                 <div>
-                    <span class="text-emerald-600 font-extrabold uppercase tracking-[0.3em] text-[10px]">Where will you go next?</span>
-                    <h2 class="text-5xl lg:text-7xl font-serif text-emerald-950 mt-4 mb-8 italic">Explore The <br> Philippines</h2>
-                    <p class="text-lg text-slate-600 leading-relaxed mb-6">Discover paradise across 7,000+ islands—each one a gateway to something unforgettable. From hidden lagoons to vibrant local culture, every island tells its own story.</p>
-                    <p class="text-slate-500 italic mb-10 leading-relaxed">Feel the warmth of crystal-clear waters welcome you as you explore breathtaking landscapes untouched by time. Whether you seek adventure, serenity, or connection, each moment invites you to create memories that will stay with you.</p>
-                    <h3 class="text-sm font-black uppercase tracking-widest text-emerald-900 border-b-4 border-emerald-500 inline-block pb-1">Domestic Tours</h3>
+                    <span class="text-emerald-600 font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Where will you go next?</span>
+                    <h2 class="text-5xl lg:text-7xl font-serif text-emerald-950 mb-8 italic leading-tight">Explore The <br> Philippines</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">Discover paradise across 7,000+ islands—each one a gateway to something unforgettable.</p>
+                    <p class="text-slate-500 italic leading-relaxed">Whether you seek adventure, serenity, or connection, each moment invites you to create memories that will stay with you.</p>
                 </div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Tour Card 1 -->
-                <div class="bg-white rounded-[2rem] border border-slate-100 p-10 hover:shadow-2xl transition duration-500">
-                    <h4 class="text-emerald-600 font-bold uppercase tracking-widest text-[10px] mb-4">Stay and Discover</h4>
-                    <h3 class="text-2xl font-bold text-emerald-950 mb-6 uppercase tracking-tighter">Cebu Tours</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed mb-8">The Queen City of the South, offers a perfect blend of urban excitement and Coastal Views. Transfers and tours tailored for you.</p>
-                    <div class="flex justify-between items-end border-t border-slate-50 pt-8">
-                        <div>
-                            <span class="block text-[10px] font-bold text-slate-400 uppercase mb-1">As low as</span>
-                            <span class="text-2xl font-bold text-emerald-700 font-serif italic">₱850.00</span>
-                        </div>
-                        <span class="text-[10px] font-bold text-slate-400">per person</span>
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-2">Stay and Discover</h4>
+                        <h3 class="text-2xl font-bold text-emerald-950 mb-4">CEBU TOURS</h3>
+                        <p class="text-sm text-slate-500 mb-6">The Queen City of the South, offers a perfect blend of urban excitement and historic landmarks.</p>
+                        <div class="text-xl font-bold text-emerald-700">₱850.00 <span class="text-[10px] text-slate-400">/ per person</span></div>
                     </div>
-                </div>
-                <!-- Tour Card 2 -->
-                <div class="bg-emerald-950 rounded-[2rem] p-10 text-white shadow-xl shadow-emerald-200 relative overflow-hidden">
-                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-emerald-800 rounded-full blur-2xl"></div>
-                    <h4 class="text-emerald-400 font-bold uppercase tracking-widest text-[10px] mb-4">Explore Philippines</h4>
-                    <h3 class="text-2xl font-bold mb-6 uppercase tracking-tighter italic">Departing Manila</h3>
-                    <p class="text-sm text-emerald-100/70 leading-relaxed mb-8">Let you explore the Philippines with airfare, hotel, transfers and tours organized for you. All inclusive experience.</p>
-                    <div class="flex justify-between items-end border-t border-emerald-900 pt-8">
-                        <div>
-                            <span class="block text-[10px] font-bold text-emerald-500 uppercase mb-1">As low as</span>
-                            <span class="text-2xl font-bold text-white font-serif italic">₱14,288.00</span>
-                        </div>
-                        <span class="text-[10px] font-bold text-emerald-500">per person</span>
-                    </div>
-                </div>
-                <!-- Tour Card 3 -->
-                <div class="bg-white rounded-[2rem] border border-slate-100 p-10 hover:shadow-2xl transition duration-500">
-                    <h4 class="text-emerald-600 font-bold uppercase tracking-widest text-[10px] mb-4">Unlock Hidden Gems</h4>
-                    <h3 class="text-2xl font-bold text-emerald-950 mb-6 uppercase tracking-tighter">Other Packages</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed mb-8">Never too late to unlock and check the beautiful Philippines. Check our tailored packages across different domestic destinations.</p>
-                    <div class="flex justify-between items-end border-t border-slate-50 pt-8">
-                        <div>
-                            <span class="block text-[10px] font-bold text-slate-400 uppercase mb-1">As low as</span>
-                            <span class="text-2xl font-bold text-emerald-700 font-serif italic">₱2,888.00</span>
-                        </div>
-                        <span class="text-[10px] font-bold text-slate-400">per person</span>
+                    <div class="bg-emerald-50 p-8 rounded-[2rem] border border-emerald-100">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-2">Explore Philippines</h4>
+                        <h3 class="text-2xl font-bold text-emerald-950 mb-4 uppercase">Departing Manila</h3>
+                        <p class="text-sm text-slate-500 mb-6">Explore the Philippines with airfare, hotel, transfers and tours organized for you.</p>
+                        <div class="text-xl font-bold text-emerald-700">₱14,288.00 <span class="text-[10px] text-slate-400">/ per person</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CRUISE HOLIDAY -->
-    <section id="cruise" class="py-24 px-6 bg-slate-900 text-white overflow-hidden relative">
-        <div class="absolute inset-0 opacity-10">
-            <img src="https://images.unsplash.com/photo-1548574505-12ca091a3cd4?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" alt="Ocean">
-        </div>
-        <div class="max-w-7xl mx-auto relative z-10">
-            <div class="text-center mb-20">
-                <span class="text-emerald-400 font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Where will the ocean take you?</span>
-                <h2 class="text-5xl lg:text-7xl font-serif italic leading-tight mb-8">Cruise Into Paradise</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto leading-relaxed italic">Relax in luxury, explore hidden gems, and make memories that last a lifetime. Let the rhythm of the sea guide you toward unforgettable experiences.</p>
+    <!-- CRUISE HOLIDAY WITH PICTURES -->
+    <section id="cruise" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-emerald-600 font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Where will the ocean take you?</span>
+                <h2 class="text-5xl font-serif text-emerald-950 italic">Cruise Into Paradise</h2>
             </div>
 
-            <div class="grid md:grid-cols-4 gap-6 mb-24">
-                <!-- Cruise 1 -->
-                <div class="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-md">
-                    <h4 class="text-xl font-bold mb-2">Osaka, Japan</h4>
-                    <p class="text-xs text-slate-400 mb-6 h-12 line-clamp-3 leading-relaxed">Osaka blends ancient traditions with modern vibrancy, castles, and world-famous cuisine.</p>
-                    <div class="text-2xl font-serif text-emerald-400">$480.00</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+                <!-- Osaka -->
+                <div class="card-zoom relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-700" alt="Osaka Japan">
+                    <div class="cruise-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Osaka, Japan</h3>
+                        <p class="text-xs text-emerald-100 opacity-0 group-hover:opacity-100 transition duration-500 leading-relaxed mb-4">Osaka blends ancient traditions with modern vibrancy, offering historic castles and neon-lit streets.</p>
+                        <div class="text-xl font-serif italic text-emerald-400">$480.00</div>
+                    </div>
                 </div>
-                <!-- Cruise 2 -->
-                <div class="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-md">
-                    <h4 class="text-xl font-bold mb-2">Maui, Hawaii</h4>
-                    <p class="text-xs text-slate-400 mb-6 h-12 line-clamp-3 leading-relaxed">Lush landscapes, golden beaches, volcanic peaks, and Hawaii’s natural beauty.</p>
-                    <div class="text-2xl font-serif text-emerald-400">$560.00</div>
+                <!-- Maui -->
+                <div class="card-zoom relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl group cursor-pointer lg:mt-12">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-700" alt="Maui Hawaii">
+                    <div class="cruise-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Maui, Hawaii</h3>
+                        <p class="text-xs text-emerald-100 opacity-0 group-hover:opacity-100 transition duration-500 leading-relaxed mb-4">Captivates visitors with lush landscapes, golden beaches, volcanic peaks, and breathtaking coastal drives.</p>
+                        <div class="text-xl font-serif italic text-emerald-400">$560.00</div>
+                    </div>
                 </div>
-                <!-- Cruise 3 -->
-                <div class="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-md">
-                    <h4 class="text-xl font-bold mb-2">Phuket, Thailand</h4>
-                    <p class="text-xs text-slate-400 mb-6 h-12 line-clamp-3 leading-relaxed">Turquoise waters, pristine beaches, and vibrant nightlife with authentic Thai culture.</p>
-                    <div class="text-2xl font-serif text-emerald-400">$940.00</div>
+                <!-- Phuket -->
+                <div class="card-zoom relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1589394815804-964ed9be2eb3?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-700" alt="Phuket Thailand">
+                    <div class="cruise-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Phuket, Thailand</h3>
+                        <p class="text-xs text-emerald-100 opacity-0 group-hover:opacity-100 transition duration-500 leading-relaxed mb-4">Enchants travelers with turquoise waters, pristine beaches, and vibrant nightlife.</p>
+                        <div class="text-xl font-serif italic text-emerald-400">$940.00</div>
+                    </div>
                 </div>
-                <!-- Cruise 4 -->
-                <div class="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-md">
-                    <h4 class="text-xl font-bold mb-2">Singapore City</h4>
-                    <p class="text-xs text-slate-400 mb-6 h-12 line-clamp-3 leading-relaxed">Futuristic architecture, lush gardens, diverse cultures, and world-class innovation.</p>
-                    <div class="text-2xl font-serif text-emerald-400">$690.00</div>
+                <!-- Singapore -->
+                <div class="card-zoom relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl group cursor-pointer lg:mt-12">
+                    <img src="https://images.unsplash.com/photo-1525625293386-3fb0ad7c1fe6?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-700" alt="Singapore City">
+                    <div class="cruise-overlay absolute inset-0 flex flex-col justify-end p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Singapore City</h3>
+                        <p class="text-xs text-emerald-100 opacity-0 group-hover:opacity-100 transition duration-500 leading-relaxed mb-4">Dazzles with futuristic architecture, lush gardens, diverse cultures, and world-class cuisine.</p>
+                        <div class="text-xl font-serif italic text-emerald-400">$690.00</div>
+                    </div>
                 </div>
             </div>
 
             <!-- CRUISE FORM -->
-            <div class="max-w-4xl mx-auto bg-white rounded-[3rem] p-10 lg:p-16 text-slate-900 shadow-2xl">
+            <div class="max-w-4xl mx-auto bg-white rounded-[3rem] p-10 lg:p-16 shadow-2xl border border-slate-100">
                 <h3 class="text-3xl font-serif italic text-emerald-950 mb-10 text-center">Plan your cruise holiday today!</h3>
                 <form class="grid md:grid-cols-2 gap-6">
-                    <input type="text" placeholder="Departure City Port" class="w-full p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-emerald-500 outline-none">
-                    <input type="text" placeholder="Arrival City Port" class="w-full p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-emerald-500 outline-none">
-                    <div class="flex items-center gap-4">
-                        <label class="text-[10px] uppercase font-bold text-slate-400">Start Date</label>
-                        <input type="date" class="flex-1 p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-emerald-500 outline-none">
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <label class="text-[10px] uppercase font-bold text-slate-400">End Date</label>
-                        <input type="date" class="flex-1 p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-emerald-500 outline-none">
-                    </div>
-                    <input type="number" placeholder="Adults" class="w-full p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-emerald-500 outline-none">
-                    <input type="number" placeholder="Child/ren" class="w-full p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-emerald-500 outline-none">
-                    <input type="text" placeholder="Full Name" class="md:col-span-2 w-full p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-emerald-500 outline-none">
-                    <input type="email" placeholder="Email Address" class="md:col-span-2 w-full p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-emerald-500 outline-none">
-                    <textarea placeholder="Message/Name of Cruiseline/Remarks" rows="4" class="md:col-span-2 w-full p-4 rounded-xl bg-slate-50 border-none focus:ring-2 focus:ring-emerald-500 outline-none"></textarea>
-                    <button class="md:col-span-2 bg-emerald-700 text-white py-5 rounded-2xl font-bold uppercase tracking-widest hover:bg-emerald-800 transition shadow-xl">Request Cruise Booking</button>
+                    <input type="text" placeholder="Departure City Port" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500">
+                    <input type="text" placeholder="Arrival City Port" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500">
+                    <input type="date" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500">
+                    <input type="date" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500">
+                    <input type="number" placeholder="Adults" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500">
+                    <input type="number" placeholder="Children" class="w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500">
+                    <input type="text" placeholder="Full Name" class="md:col-span-2 w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500">
+                    <textarea placeholder="Message/Requests" rows="4" class="md:col-span-2 w-full p-4 rounded-xl bg-slate-50 border-none outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+                    <button class="md:col-span-2 bg-emerald-700 text-white py-5 rounded-2xl font-bold uppercase tracking-widest hover:bg-emerald-800 shadow-xl transition">Submit Request</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- OTHER PRODUCTS AND SERVICES -->
+    <!-- OTHER SERVICES -->
     <section id="services" class="py-24 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
+            <div class="text-center mb-16">
                 <h2 class="text-4xl font-serif text-emerald-950 italic">Other Products and Services</h2>
-                <div class="w-20 h-1 bg-emerald-500 mx-auto mt-4"></div>
             </div>
-            
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Service 1 -->
-                <div class="service-card p-10 rounded-[2.5rem] border border-slate-100 bg-white shadow-sm transition-all duration-300">
-                    <div class="text-emerald-500 mb-6"><i data-lucide="plane"></i></div>
-                    <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-2 italic">Fly and Sail</h4>
-                    <h3 class="text-lg font-bold text-emerald-950 mb-4">Airlines & Ferries</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed mb-6">We offer convenient booking for domestic and international flights and ferry services at competitive rates.</p>
-                    <div class="text-xl font-bold text-emerald-700">$880.00</div>
+                <div class="p-8 rounded-[2.5rem] border border-slate-100 bg-white hover:border-emerald-500 transition duration-300">
+                    <i data-lucide="plane" class="text-emerald-500 mb-6"></i>
+                    <h4 class="text-[10px] font-bold uppercase text-emerald-600 mb-2 italic">Fly and Sail</h4>
+                    <h3 class="text-lg font-bold mb-4">Airlines & Ferries</h3>
+                    <p class="text-xs text-slate-500 mb-6 leading-relaxed">Convenient booking for domestic and international flights and ferry services at competitive rates.</p>
+                    <div class="text-lg font-bold text-emerald-700">$880.00</div>
                 </div>
                 <!-- Service 2 -->
-                <div class="service-card p-10 rounded-[2.5rem] border border-slate-100 bg-white shadow-sm transition-all duration-300">
-                    <div class="text-emerald-500 mb-6"><i data-lucide="car"></i></div>
-                    <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-2 italic">Stay and Move</h4>
-                    <h3 class="text-lg font-bold text-emerald-950 mb-4">Hotel & Transfers</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Book top hotels worldwide and enjoy hassle-free airport and city transfers with our reliable car services.</p>
-                    <div class="text-xl font-bold text-emerald-700">$160.00</div>
+                <div class="p-8 rounded-[2.5rem] border border-slate-100 bg-white hover:border-emerald-500 transition duration-300">
+                    <i data-lucide="home" class="text-emerald-500 mb-6"></i>
+                    <h4 class="text-[10px] font-bold uppercase text-emerald-600 mb-2 italic">Stay and Move</h4>
+                    <h3 class="text-lg font-bold mb-4">Hotel & Car Transfers</h3>
+                    <p class="text-xs text-slate-500 mb-6 leading-relaxed">Book top hotels worldwide and enjoy hassle-free airport and city transfers with our reliable car services.</p>
+                    <div class="text-lg font-bold text-emerald-700">$160.00</div>
                 </div>
                 <!-- Service 3 -->
-                <div class="service-card p-10 rounded-[2.5rem] border border-slate-100 bg-white shadow-sm transition-all duration-300">
-                    <div class="text-emerald-500 mb-6"><i data-lucide="smartphone"></i></div>
-                    <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-2 italic">Pay & Recharge</h4>
-                    <h3 class="text-lg font-bold text-emerald-950 mb-4">Bills & E-loading</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Pay bills and send mobile load quickly and securely through our trusted payment center services.</p>
-                    <div class="text-xl font-bold text-emerald-700">$140.00</div>
+                <div class="p-8 rounded-[2.5rem] border border-slate-100 bg-white hover:border-emerald-500 transition duration-300">
+                    <i data-lucide="credit-card" class="text-emerald-500 mb-6"></i>
+                    <h4 class="text-[10px] font-bold uppercase text-emerald-600 mb-2 italic">Pay & Recharge</h4>
+                    <h3 class="text-lg font-bold mb-4">Bills & E-Loading</h3>
+                    <p class="text-xs text-slate-500 mb-6 leading-relaxed">Pay bills and send mobile load quickly and securely through our trusted payment center services.</p>
+                    <div class="text-lg font-bold text-emerald-700">$140.00</div>
                 </div>
                 <!-- Service 4 -->
-                <div class="service-card p-10 rounded-[2.5rem] border border-slate-100 bg-white shadow-sm transition-all duration-300">
-                    <div class="text-emerald-500 mb-6"><i data-lucide="file-check"></i></div>
-                    <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-2 italic">Beyond the Borders</h4>
-                    <h3 class="text-lg font-bold text-emerald-950 mb-4">Passport & Visa</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed mb-6">We assist with fast and reliable passport and visa processing to help you travel worry-free across borders.</p>
-                    <div class="text-xl font-bold text-emerald-700">$90.00</div>
+                <div class="p-8 rounded-[2.5rem] border border-slate-100 bg-white hover:border-emerald-500 transition duration-300">
+                    <i data-lucide="file-check" class="text-emerald-500 mb-6"></i>
+                    <h4 class="text-[10px] font-bold uppercase text-emerald-600 mb-2 italic">Beyond Borders</h4>
+                    <h3 class="text-lg font-bold mb-4">Passport & Visa</h3>
+                    <p class="text-xs text-slate-500 mb-6 leading-relaxed">Fast and reliable passport and visa processing to help you travel worry-free across borders.</p>
+                    <div class="text-lg font-bold text-emerald-700">$90.00</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER / NEWSLETTER -->
-    <footer id="about" class="bg-emerald-950 text-white pt-24 pb-12 px-6 overflow-hidden relative">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-20 relative z-10">
+    <!-- FOOTER -->
+    <footer id="about" class="bg-emerald-950 text-white pt-24 pb-12 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-16 border-b border-emerald-900 pb-16">
             <div>
-                <div class="flex items-center gap-2 mb-8">
-                    <span class="text-2xl font-bold tracking-tighter uppercase">BOZABE</span>
-                </div>
-                <p class="text-emerald-100/60 leading-relaxed mb-10">
-                    We create unforgettable travel experiences. Your journey starts here — simple, seamless, and made just for you.
-                </p>
-                <div class="flex flex-col gap-2">
-                    <h5 class="text-[10px] font-bold uppercase tracking-widest text-emerald-400">Newsletter Offer</h5>
-                    <div class="flex gap-2">
-                        <input type="email" placeholder="E-mail address" class="bg-white/10 border border-white/20 p-4 rounded-xl flex-1 outline-none">
-                        <button class="bg-emerald-500 px-6 rounded-xl font-bold hover:bg-emerald-400 transition italic">Sign Up</button>
-                    </div>
-                    <p class="text-[10px] text-emerald-500 mt-2 font-bold uppercase">Enjoy your Holiday with discounts</p>
+                <span class="text-2xl font-bold tracking-tighter uppercase mb-6 block">BOZABE</span>
+                <p class="text-emerald-100/60 leading-relaxed mb-8 italic text-sm">We create unforgettable travel experiences. Your journey starts here — simple, seamless, and made just for you.</p>
+                <div class="flex gap-4">
+                    <input type="email" placeholder="E-mail" class="bg-white/10 border border-white/20 p-3 rounded-xl flex-1 text-sm outline-none">
+                    <button class="bg-emerald-500 px-6 rounded-xl font-bold text-xs uppercase italic">Join</button>
                 </div>
             </div>
-
             <div class="grid grid-cols-2 gap-8">
                 <div>
-                    <h4 class="text-xs font-bold uppercase tracking-[0.3em] mb-10 text-emerald-400">Useful Links</h4>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-8">Useful Links</h4>
                     <ul class="text-sm space-y-4 text-emerald-100/50">
-                        <li><a href="#home" class="hover:text-emerald-400">Home</a></li>
-                        <li><a href="#about" class="hover:text-emerald-400">About</a></li>
-                        <li><a href="#" class="hover:text-emerald-400 italic">Affiliate Program</a></li>
-                        <li><a href="#" class="hover:text-emerald-400 italic">FAQs</a></li>
+                        <li><a href="#" class="hover:text-white">Home</a></li>
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                        <li><a href="#" class="hover:text-white italic">Affiliate Program</a></li>
+                        <li><a href="#" class="hover:text-white">FAQs</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-xs font-bold uppercase tracking-[0.3em] mb-10 text-emerald-400 invisible">Links</h4>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-8 invisible">Links</h4>
                     <ul class="text-sm space-y-4 text-emerald-100/50">
-                        <li><a href="#international" class="hover:text-emerald-400">International</a></li>
-                        <li><a href="#domestic" class="hover:text-emerald-400">Domestic</a></li>
-                        <li><a href="#cruise" class="hover:text-emerald-400">Cruise</a></li>
-                        <li><a href="#contact" class="hover:text-emerald-400">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Destinations</a></li>
+                        <li><a href="#" class="hover:text-white">Tour Packages</a></li>
+                        <li><a href="#" class="hover:text-white">Contacts</a></li>
                     </ul>
                 </div>
             </div>
-
             <div>
-                <h4 class="text-xs font-bold uppercase tracking-[0.3em] mb-10 text-emerald-400">Contacts</h4>
-                <ul class="text-sm space-y-6 text-emerald-100/80">
-                    <li class="flex items-start gap-4">
-                        <i data-lucide="map-pin" size="18" class="text-emerald-400"></i>
-                        <span>Cebu City, Philippines 6000</span>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <i data-lucide="mail" size="18" class="text-emerald-400"></i>
-                        <span class="underline italic font-bold">travel@bozabe.com</span>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <i data-lucide="phone" size="18" class="text-emerald-400"></i>
-                        <span class="font-bold">+63 927 - 623 - 9022</span>
-                    </li>
+                <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-8">Contacts</h4>
+                <ul class="text-sm space-y-4 text-emerald-100/70">
+                    <li class="flex gap-4"><span>Cebu City, Philippines 6000</span></li>
+                    <li class="flex gap-4 font-bold text-emerald-400 underline italic uppercase"><span>travel@bozabe.com</span></li>
+                    <li class="flex gap-4"><span>+63 927 - 623 - 9022</span></li>
                 </ul>
             </div>
         </div>
-
-        <div class="max-w-7xl mx-auto border-t border-white/5 mt-24 pt-12 text-center text-[10px] text-emerald-500/50 uppercase font-bold tracking-[0.2em]">
-            <p>© Copyright Bozabe Travel Services. All rights reserved.</p>
+        <div class="text-center pt-10 text-[10px] font-bold text-emerald-800 uppercase tracking-widest">
+            © Copyright Bozabe Travel Services. All rights reserved.
         </div>
     </footer>
 
