@@ -163,9 +163,65 @@
 
     </main>
 
-    <!-- FOOTER -->
-    <footer class="py-12 bg-emerald-950 text-white text-center border-t border-emerald-900">
-        <p class="text-[10px] font-bold text-emerald-800 uppercase tracking-widest italic">© Copyright Bozabe Travel Services. All rights reserved.</p>
+    <!-- UNIVERSAL FOOTER -->
+    <footer id="about" class="bg-emerald-950 text-white pt-24 pb-12 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-16 border-b border-emerald-900 pb-16">
+            
+            <!-- Company Bio -->
+            <div>
+                <span class="text-2xl font-bold tracking-tighter uppercase mb-6 block text-emerald-50 text-left">BOZABE<span class="text-emerald-500">.</span></span>
+                <p class="text-emerald-100/60 leading-relaxed mb-8 italic text-sm text-left">
+                    We create unforgettable travel experiences. Your journey starts here — simple, seamless, and made just for you.
+                </p>
+                <div class="flex gap-4">
+                    <input type="email" placeholder="Join newsletter" class="bg-white/10 border border-white/20 p-3 rounded-xl flex-1 text-sm outline-none focus:bg-white/20 transition">
+                    <button class="bg-emerald-500 px-6 rounded-xl font-bold text-xs uppercase italic tracking-widest hover:bg-emerald-400 transition">Join</button>
+                </div>
+            </div>
+
+            <!-- Links Column -->
+            <div class="grid grid-cols-2 gap-8 text-sm">
+                <div class="text-left">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-8">Useful Links</h4>
+                    <ul class="space-y-4 text-emerald-100/50">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="terms.html" class="hover:text-emerald-400 font-bold transition underline decoration-emerald-800">Booking Terms</a></li>
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="text-left">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-8">Navigation</h4>
+                    <ul class="space-y-4 text-emerald-100/50">
+                        <li><a href="index.html#international" class="hover:text-white transition">International</a></li>
+                        <li><a href="index.html#domestic" class="hover:text-white transition">Domestic</a></li>
+                        <li><a href="index.html#cruise" class="hover:text-white transition">Cruise Holidays</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition">All Services</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="text-left">
+                <h4 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-8">Contacts</h4>
+                <ul class="space-y-4 text-emerald-100/70">
+                    <li class="flex gap-4 items-center"><i data-lucide="map-pin" size="16" class="text-emerald-500"></i> <span>Cebu City, PH 6000</span></li>
+                    <li class="flex gap-4 font-bold text-emerald-400 underline italic uppercase items-center hover:text-white transition"><i data-lucide="mail" size="16"></i> <span>travel@bozabe.com</span></li>
+                    <li class="flex gap-4 items-center"><i data-lucide="phone" size="16" class="text-emerald-500"></i> <span>+63 927 - 623 - 9022</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright & Legal -->
+        <div class="max-w-7xl mx-auto pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-[10px] font-bold text-emerald-800 uppercase tracking-widest italic">
+                © Copyright Bozabe Travel Services. All rights reserved.
+            </p>
+            <p class="text-[9px] text-emerald-900/60 uppercase tracking-tighter">
+                All registered trademarks referenced are owned by their respective holders.
+            </p>
+        </div>
+    </footer>
     </footer>
 
     <script>
