@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Book Covers | Bozabe Manila</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        /* TRAVEL BOOK COVER EFFECT */
+        .book-cover {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            border-radius: 4px 20px 20px 4px;
+            overflow: hidden;
+            box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border-left: 8px solid rgba(0,0,0,0.2); /* Book Spine */
+        }
+        
+        .book-cover:hover {
+            transform: rotateY(-10deg) scale(1.02);
+            box-shadow: 20px 20px 50px rgba(6, 78, 59, 0.3);
+        }
+
+        .book-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(6, 78, 59, 0.9) 0%, rgba(6, 78, 59, 0.2) 50%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            color: white;
+        }
+
+        .spine-glare {
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 15px;
+            background: linear-gradient(to right, rgba(255,255,255,0.1), transparent);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="p-6 bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 text-emerald-950 font-bold uppercase tracking-tighter text-xl">
+                <i data-lucide="arrow-left" class="text-emerald-500"></i> Back
+            </a>
+            <div class="text-center">
+                <span class="block text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em]">Manila Departures</span>
+                <span class="text-xs font-bold text-emerald-700">MNL Hub</span>
+            </div>
+            <a href="index.html#contact" class="bg-emerald-700 text-white px-5 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest">Inquire</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="py-20 px-6 bg-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-emerald-600 font-bold uppercase tracking-[0.4em] text-[10px] mb-4 block">International Journeys</span>
+            <h1 class="text-5xl lg:text-7xl font-serif italic text-emerald-950 mb-6">Choose your travel <br> book cover</h1>
+            <p class="text-slate-500 max-w-lg mx-auto">Every destination is a new chapter. Select a cover below to begin planning your story with Bozabe’s 0% installment plans.</p>
+        </div>
+    </header>
+
+    <!-- BOOK COVERS GRID -->
+    <main class="max-w-7xl mx-auto py-12 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-24">
+
+        <!-- Book 1: Japan -->
+        <div class="group">
+            <div class="book-cover">
+                <div class="spine-glare"></div>
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800" class="w-full h-full object-cover">
+                <div class="book-overlay text-left">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.3em] mb-2 text-emerald-400">Vol. 01 — East Asia</span>
+                    <h2 class="text-4xl font-serif italic mb-2">The Japan <br> Chronicles</h2>
+                    <p class="text-xs text-emerald-100/70 mb-6 italic">Tokyo, Kyoto, & Osaka</p>
+                    <div class="flex justify-between items-center border-t border-white/20 pt-4">
+                        <span class="text-sm font-bold tracking-widest uppercase">Start Journey</span>
+                        <i data-lucide="chevron-right" size="16"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 2: Korea -->
+        <div class="group">
+            <div class="book-cover">
+                <div class="spine-glare"></div>
+                <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?q=80&w=800" class="w-full h-full object-cover">
+                <div class="book-overlay text-left">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.3em] mb-2 text-emerald-400">Vol. 02 — Hallyu Pulse</span>
+                    <h2 class="text-4xl font-serif italic mb-2">Seoul <br> Soul Spirit</h2>
+                    <p class="text-xs text-emerald-100/70 mb-6 italic">Nami Island & Palaces</p>
+                    <div class="flex justify-between items-center border-t border-white/20 pt-4">
+                        <span class="text-sm font-bold tracking-widest uppercase">Start Journey</span>
+                        <i data-lucide="chevron-right" size="16"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 3: Europe -->
+        <div class="group">
+            <div class="book-cover">
+                <div class="spine-glare"></div>
+                <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800" class="w-full h-full object-cover">
+                <div class="book-overlay text-left">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.3em] mb-2 text-emerald-400">Vol. 03 — Grand Heritage</span>
+                    <h2 class="text-4xl font-serif italic mb-2">European <br> Elegance</h2>
+                    <p class="text-xs text-emerald-100/70 mb-6 italic">Paris, Rome, & Venice</p>
+                    <div class="flex justify-between items-center border-t border-white/20 pt-4">
+                        <span class="text-sm font-bold tracking-widest uppercase">Start Journey</span>
+                        <i data-lucide="chevron-right" size="16"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 4: Thailand -->
+        <div class="group">
+            <div class="book-cover">
+                <div class="spine-glare"></div>
+                <img src="https://images.unsplash.com/photo-1528181304800-2f1738b270ad?q=80&w=800" class="w-full h-full object-cover">
+                <div class="book-overlay text-left">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.3em] mb-2 text-emerald-400">Vol. 04 — Tropical Zen</span>
+                    <h2 class="text-4xl font-serif italic mb-2">Thai <br> Temptations</h2>
+                    <p class="text-xs text-emerald-100/70 mb-6 italic">Bangkok & Phuket</p>
+                    <div class="flex justify-between items-center border-t border-white/20 pt-4">
+                        <span class="text-sm font-bold tracking-widest uppercase">Start Journey</span>
+                        <i data-lucide="chevron-right" size="16"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 5: Singapore -->
+        <div class="group">
+            <div class="book-cover">
+                <div class="spine-glare"></div>
+                <img src="https://images.unsplash.com/photo-1525625293386-3fb0ad7c1fe6?q=80&w=800" class="w-full h-full object-cover">
+                <div class="book-overlay text-left">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.3em] mb-2 text-emerald-400">Vol. 05 — Future Living</span>
+                    <h2 class="text-4xl font-serif italic mb-2">The Lion <br> City Story</h2>
+                    <p class="text-xs text-emerald-100/70 mb-6 italic">Innovation & Culture</p>
+                    <div class="flex justify-between items-center border-t border-white/20 pt-4">
+                        <span class="text-sm font-bold tracking-widest uppercase">Start Journey</span>
+                        <i data-lucide="chevron-right" size="16"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 6: Australia -->
+        <div class="group">
+            <div class="book-cover">
+                <div class="spine-glare"></div>
+                <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=800" class="w-full h-full object-cover">
+                <div class="book-overlay text-left">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.3em] mb-2 text-emerald-400">Vol. 06 — Southern Cross</span>
+                    <h2 class="text-4xl font-serif italic mb-2">Australian <br> Adventures</h2>
+                    <p class="text-xs text-emerald-100/70 mb-6 italic">Sydney & Great Barrier Reef</p>
+                    <div class="flex justify-between items-center border-t border-white/20 pt-4">
+                        <span class="text-sm font-bold tracking-widest uppercase">Start Journey</span>
+                        <i data-lucide="chevron-right" size="16"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- BNPL PROMO SECTION -->
+    <section class="bg-emerald-950 py-20 px-6 text-white text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-serif italic mb-4">Every book is budget-friendly.</h2>
+            <p class="text-emerald-100/60 mb-10">Don't let the price tag stop your story. All international packages from Manila are eligible for 0% interest installments, no credit card required.</p>
+            <a href="index.html#contact" class="bg-emerald-500 text-emerald-950 px-10 py-4 rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-emerald-400 transition">Contact Agent for Pricing</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-white text-center border-t border-slate-100">
+        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest italic">© Copyright Bozabe Travel Services. All rights reserved.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
